@@ -1,35 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-
-<!-- Tab links, each one with an onclick event associated with it -->
-<div class="tab">
-  <button id = "clientButton" class="tablinks" onclick="navigateToClientPage()">Client</button>
-  <button id = "productButton" class="tablinks" onclick="navigateToProductPage()">Products</button>
-  <button id = "cartButton" class="tablinks" onclick="navigateToCartPage()">Cart</button>
+<div class="container">
+  <img src="pic.png" alt="Image of logo" width="600" height="150">
 </div>
+  
 
-<!-- Tab content -->
-<div id="Client" class="tabcontent">
-  <h3>Client Information</h3>
-  <p>Tell us a bit about you.</p>
-	Choose a Category:
-	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
-	<option value=""></option>
-	<option value="Vegetarian">Vegetarian</option>
-    <option value="GlutenFree">GlutenFree</option>
-    <option value="None">None</option>
-	</select>
-</div>
+<div class="container">
+    <div class="title">
+        <h1>Hi Dear Customer! Welcome to Welmert Online Grocery Store</h1>
+    </div>
 
-<div id="Cart" class="tabcontent">
-  <h3>Cart</h3>
-  <p>Here is your cart.</p>
-  <div id="displayCart"></div>
+    <div class="tab">
+        <button id="clientButton" class="tablinks" onclick="navigateToClientPage()">Client</button>
+        <button id="productButton" class="tablinks" onclick="navigateToProductPage()">Products</button>
+        <button id="cartButton" class="tablinks" onclick="navigateToCartPage()">Cart</button>
+    </div>
 </div>
 
 <script src="groceries.js"></script>
