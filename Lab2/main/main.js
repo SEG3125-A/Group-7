@@ -3,7 +3,7 @@ function navigateToClientPage() {
 }
 
 function navigateToProductPage() {
-	location.assign = "products/products.html"
+	window.location.href="products.html"
 }
 
 function navigateToCartPage() {
