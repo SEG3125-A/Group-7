@@ -52,3 +52,10 @@ function updateProductDisplay() {
         }
     });
 }
+
+const cart = []
+
+function addToCart(passValue) {
+    cart.push(passValue);
+    console.log(cart)
+}
