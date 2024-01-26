@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="customer.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f8ff; 
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+            background-color: #ffffff; 
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            max-width: 300px;
+            position: absolute; 
+            top: 10px; 
+            left: 10px; 
+        }
+
+        h1 {
+            text-align: center; 
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #3498db; 
+            color: #ffffff; 
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9; 
+        }
+    </style>
+</head>
+<body>
+    <img src="../main/pic.png" alt="Welmert">
+
+    <h1>Customer Page</h1>
+
+    <form id="customerForm">
+        <label>
+            Name:
+            <input type="text" name="customerName" required>
+        </label>
+
+        <label>
+            Email:
+            <input type="email" name="customerEmail" required>
+        </label>
+
+        <label>
+            Address:
+            <input name="customerAddress" rows="4" required>
+        </label>
+
+        <label>
+            <input type="checkbox" name="vegetarian"> Vegetarian
+        </label>
+
+        <label>
+            <input type="checkbox" name="glutenAllergy"> Allergic to Gluten
+        </label>
+
+        <label>
+            Preference for products:
+            <select name="organicPreference">
+                <option value="organic">Organic</option>
+                <option value="nonOrganic">Non-organic</option>
+            </select>
+        </label>
+
+        <button type="button" onclick="savePreferences()">Save Preferences</button>
+    </form>
+</body>
+</html>
+
+
