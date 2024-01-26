@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="customer.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Page</title>
@@ -56,7 +57,7 @@
 
     <h1>Customer Page</h1>
 
-    <form>
+    <form id="customerForm">
         <label>
             Name:
             <input type="text" name="customerName" required>
@@ -88,7 +89,7 @@
             </select>
         </label>
 
-        <button type="submit">Save Preferences</button>
+        <button type="button" onclick="savePreferences()">Save Preferences</button>
     </form>
 </body>
 </html>
