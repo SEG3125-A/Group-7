@@ -1,6 +1,5 @@
 function navigateToClientPage() {
-	//TODO: put the customer html file here
-	window.location.herf = "customer/customer.html"
+	window.location.href="Customer/customer.html"
 }
 
 function navigateToProductPage() {
@@ -8,11 +7,10 @@ function navigateToProductPage() {
 }
 
 function navigateToCartPage() {
-	//TODO: put the cart html file here
-	window.location.herf = "cart/cart.htmls"
+	window.location.href="cart/cart.html"
 }
 
-	
+
 // This function is called when the "Add selected items to cart" button in clicked
 // The purpose is to build the HTML to be displayed (a Paragraph) 
 // We build a paragraph to contain the list of selected items, and the total price
