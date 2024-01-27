@@ -65,14 +65,13 @@ function updateProductDisplay() {
 const cart = [];
 
 function addToCart(passValue) {
-    
     const product = document.querySelector(`button[value='${passValue}']`).parentNode;
     const productName = product.querySelector('h3').textContent;
     const productPrice = parseFloat(product.querySelector('p').textContent.replace('Price: $', ''));
 
-    // Add the product to the cart array
     cart.push({ name: productName, price: productPrice });
 
-    // Log the updated cart
-    console.log(cart);
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    alert(`${productName} has been added to the cart.`);
 }
