@@ -2,8 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCartDisplay();
 });
 
-const cart =[];
-
 function updateCartDisplay() {
     const cartContents = document.getElementById('cartContents');
     const totalPriceFull = document.getElementById('totalPrice');
