@@ -11,18 +11,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 function navigateToCartPage() {
-	window.location.href="file:///Users/kajanrajakumar/Group-7/Lab2/cart/cart.html"
+	window.location.href="cart.html"
 }
 
 function navigateToClientPage() {
-	window.location.href="/Customer/customer.html"
+	window.location.href="customer.html"
 }
 
 // Function to update the display of products based on sorting and filtering criteria
 function updateProductDisplay() {
     // Selecting all product elements and converting NodeList to an Array for sorting
     let products = Array.from(document.querySelectorAll('.product'));
-    console.log(products.find(product => product.name === Milk).price);
+    //console.log(products.find(product => product.name === Milk).price);
     // Retrieve the current value of the price sorting dropdown
     const sortBy = document.getElementById('priceSort').value;
 
@@ -65,6 +65,14 @@ function updateProductDisplay() {
 const cart = [];
 
 function addToCart(passValue) {
-    cart.push(passValue);
+    
+    const product = document.querySelector(`button[value='${passValue}']`).parentNode;
+    const productName = product.querySelector('h3').textContent;
+    const productPrice = parseFloat(product.querySelector('p').textContent.replace('Price: $', ''));
+
+    // Add the product to the cart array
+    cart.push({ name: productName, price: productPrice });
+
+    // Log the updated cart
     console.log(cart);
 }

@@ -1,13 +1,13 @@
 function navigateToClientPage() {
-	window.location.href="Customer/customer.html"
+	window.location.href="customer.html"
 }
 
 function navigateToProductPage() {
-	window.location.href="products/products.html"
+	window.location.href="products.html"
 }
 
 function navigateToCartPage() {
-	window.location.href="cart/cart.html"
+	window.location.href="cart.html"
 }
 
 
