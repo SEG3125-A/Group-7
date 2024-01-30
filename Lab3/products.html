@@ -23,15 +23,32 @@
             <option value="true">Gluten-Free</option>
             <option value="false">Contains Gluten</option>
         </select>
+
+        <select id="dairyFilter">
+            <option value="all">All</option>
+            <option value="true">Dairy</option>
+            <option value="false">Non-Dairy</option>
+        </select>
+
+        <select id="fruitFilter">
+            <option value="all">All</option>
+            <option value="true">Fruit</option>
+            <option value="false">Non-Fruit</option>
+        </select>
     </div>
+
+    <br>
 
     <div class="tab">
         <button id="clientButton" class="tablinks" onclick="navigateToClientPage()">Client</button>
         <button id="cartButton" class="tablinks" onclick="navigateToCartPage()">Cart</button>
     </div>
 
+    <br>
+
     <div class="product-container">
-        <div class="product" data-price="15" data-vegetarian="true" data-gluten-free="false">
+        <div class="product" data-price="15" data-vegetarian="true" data-gluten-free="false" data-dairy="false"
+            data-fruit="false">
             <h3>Organic Broccoli</h3>
             <p>Price: $15</p>
             <p>Vegetarian: Yes</p>
@@ -39,7 +56,8 @@
             <button value="Broccoli" onclick="addToCart(this.value)">Add to Cart</button>
         </div>
 
-        <div class="product" data-price="8" data-vegetarian="true" data-gluten-free="true">
+        <div class="product" data-price="8" data-vegetarian="true" data-gluten-free="true" data-dairy="true"
+            data-fruit="false">
             <h3>Almond Milk</h3>
             <p>Price: $8</p>
             <p>Vegetarian: Yes</p>
@@ -47,7 +65,8 @@
             <button value="Milk" onclick="addToCart(this.value)">Add to Cart</button>
         </div>
 
-        <div class="product" data-price="5" data-vegetarian="true" data-gluten-free="true">
+        <div class="product" data-price="5" data-vegetarian="true" data-gluten-free="true" data-dairy="false"
+            data-fruit="false">
             <h3>Quinoa</h3>
             <p>Price: $5</p>
             <p>Vegetarian: Yes</p>
@@ -55,7 +74,8 @@
             <button value="Quinoa" onclick="addToCart(this.value)">Add to Cart</button>
         </div>
 
-        <div class="product" data-price="12" data-vegetarian="false" data-gluten-free="true">
+        <div class="product" data-price="12" data-vegetarian="false" data-gluten-free="true" data-dairy="false"
+            data-fruit="false">
             <h3>Chicken Breast</h3>
             <p>Price: $12</p>
             <p>Vegetarian: No</p>
@@ -63,7 +83,18 @@
             <button value="Breast" onclick="addToCart(this.value)">Add to Cart</button>
         </div>
 
-        <div class="product" data-price="7" data-vegetarian="true" data-gluten-free="false">
+        <div class="product" data-price="7" data-vegetarian="true" data-gluten-free="false" data-dairy="false"
+            data-fruit="true">
+            <h3>Avocado</h3>
+            <p>Price: $10</p>
+            <p>Vegetarian: Yes</p>
+            <p>Gluten-Free: No</p>
+            <p>Fruit: Yes</p>
+            <button value="Pasta" onclick="addToCart(this.value)">Add to Cart</button>
+        </div>
+
+        <div class="product" data-price="7" data-vegetarian="true" data-gluten-free="false" data-dairy="false"
+            data-fruit="false">
             <h3>Whole Grain Pasta</h3>
             <p>Price: $7</p>
             <p>Vegetarian: Yes</p>
@@ -71,7 +102,8 @@
             <button value="Pasta" onclick="addToCart(this.value)">Add to Cart</button>
         </div>
 
-        <div class="product" data-price="3" data-vegetarian="true" data-gluten-free="true">
+        <div class="product" data-price="3" data-vegetarian="true" data-gluten-free="true" data-dairy="false"
+            data-fruit="true">
             <h3>Bananas</h3>
             <p>Price: $3</p>
             <p>Vegetarian: Yes</p>
@@ -79,7 +111,8 @@
             <button value="Bananas" onclick="addToCart(this.value)">Add to Cart</button>
         </div>
 
-        <div class="product" data-price="20" data-vegetarian="false" data-gluten-free="true">
+        <div class="product" data-price="20" data-vegetarian="false" data-gluten-free="true" data-dairy="false"
+            data-fruit="false">
             <h3>Grass-Fed Beef</h3>
             <p>Price: $20</p>
             <p>Vegetarian: No</p>
@@ -87,7 +120,8 @@
             <button value="Beef" onclick="addToCart(this.value)">Add to Cart</button>
         </div>
 
-        <div class="product" data-price="10" data-vegetarian="false" data-gluten-free="false">
+        <div class="product" data-price="10" data-vegetarian="false" data-gluten-free="false" data-dairy="false"
+            data-fruit="false">
             <h3>Salmon Fillet</h3>
             <p>Price: $10</p>
             <p>Vegetarian: No</p>
@@ -95,7 +129,8 @@
             <button value="Salmon" onclick="addToCart(this.value)">Add to Cart</button>
         </div>
 
-        <div class="product" data-price="4" data-vegetarian="true" data-gluten-free="true">
+        <div class="product" data-price="4" data-vegetarian="true" data-gluten-free="true" data-dairy="false"
+            data-fruit="false">
             <h3>Carrots</h3>
             <p>Price: $4</p>
             <p>Vegetarian: Yes</p>
@@ -103,7 +138,8 @@
             <button value="Carrots" onclick="addToCart(this.value)">Add to Cart</button>
         </div>
 
-        <div class="product" data-price="11" data-vegetarian="true" data-gluten-free="false">
+        <div class="product" data-price="11" data-vegetarian="true" data-gluten-free="false" data-dairy="false"
+            data-fruit="false">
             <h3>Whole Wheat Bread</h3>
             <p>Price: $11</p>
             <p>Vegetarian: Yes</p>
