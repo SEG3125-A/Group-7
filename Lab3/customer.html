@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="customer.js"></script>
+    <link rel="stylesheet" type="text/css" href="customer.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Page</title>
+</head>
+
+<body>
+    <img src="../Lab2/main/pic.png" alt="Welmert">
+
+    <h1>Customer Page</h1>
+
+    <form id="customerForm">
+        <label>
+            Name:
+            <input type="text" name="customerName" required>
+        </label>
+
+        <label>
+            Email:
+            <input type="email" name="customerEmail" required>
+        </label>
+
+        <label>
+            Address:
+            <input name="customerAddress" rows="4" required>
+        </label>
+
+        <label>
+            <input type="checkbox" name="vegetarian"> Vegetarian
+        </label>
+
+        <label>
+            <input type="checkbox" name="glutenAllergy"> Allergic to Gluten
+        </label>
+
+        <label>
+            Preference for products:
+            <select name="organicPreference">
+                <option value="organic">Organic</option>
+                <option value="nonOrganic">Non-organic</option>
+            </select>
+        </label>
+
+        <button type="button" onclick="savePreferences()">Save Preferences</button>
+    </form>
+</body>
+</html>
+
+
