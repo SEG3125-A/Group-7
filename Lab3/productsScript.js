@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('priceSort').addEventListener('change', updateProductDisplay);
     document.getElementById('vegetarianFilter').addEventListener('change', updateProductDisplay);
     document.getElementById('glutenFreeFilter').addEventListener('change', updateProductDisplay);
+    document.getElementById('dairyFilter').addEventListener('change', updateProductDisplay);
+    document.getElementById('fruitFilter').addEventListener('change', updateProductDisplay);
 
     // Initial call to update the product display based on default dropdown values on page load
     updateProductDisplay();
@@ -11,11 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 function navigateToCartPage() {
-	window.location.href="cart.html"
+    window.location.href = "cart.html"
 }
 
 function navigateToClientPage() {
-	window.location.href="customer.html"
+    window.location.href = "customer.html"
 }
 
 // Function to update the display of products based on sorting and filtering criteria
@@ -43,15 +45,18 @@ function updateProductDisplay() {
     // Retrieve the current values of the vegetarian and gluten-free filters
     const vegetarianFilter = document.getElementById('vegetarianFilter').value;
     const glutenFreeFilter = document.getElementById('glutenFreeFilter').value;
+    const dairyFilter = document.getElementById('dairyFilter').value;
+    const fruitFilter = document.getElementById('fruitFilter').value;
 
     // Loop through each product to determine its visibility based on the filter criteria
     products.forEach(product => {
         const isVegetarian = product.getAttribute('data-vegetarian') === 'true';
         const isGlutenFree = product.getAttribute('data-gluten-free') === 'true';
+        const isDairy = product.getAttribute('data-dairy') === 'true';
+        const isFruit = product.getAttribute('data-fruit') === 'true';
 
         // Determine if the product should be shown based on the filter values
-        let showProduct = (vegetarianFilter === 'all' || isVegetarian.toString() === vegetarianFilter) &&
-            (glutenFreeFilter === 'all' || isGlutenFree.toString() === glutenFreeFilter);
+        let showProduct = (vegetarianFilter === 'all' || isVegetarian.toString() === vegetarianFilter) && (glutenFreeFilter === 'all' || isGlutenFree.toString() === glutenFreeFilter) && (dairyFilter === 'all' || isDairy.toString() === dairyFilter) && (fruitFilter === 'all' || isFruit.toString() === fruitFilter);
 
         // Update the product's visibility based on the filtering result
         if (showProduct) {
