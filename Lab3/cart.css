@@ -3,46 +3,125 @@ body {
     margin: 20px;
     background-color: #f0f8ff;
 }
+  
+#crumbs {
+    position: absolute;
+    top: 20%;
+    right: 29%; 
+    transform: translateY(-50%);
+    text-align: right;
+    margin: 0;
+}
+
+#crumbs ul {
+    list-style: none;
+    display: inline-table;
+}
+
+#crumbs ul li {
+    display: inline;
+}
+  
+#crumbs ul li a {
+    display: block;
+    float: left;
+    height: 50px;
+    background: #0000ffe2;
+    text-align: center;
+    padding: 30px 20px 0 60px;
+    position: relative;
+    margin: 0 10px 0 0;
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+}
+  
+#crumbs ul li a:after {
+    content: "";
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-left: 40px solid #0000ffe2;
+    position: absolute;
+    right: -40px;
+    top: 0;
+    z-index: 1;
+}
+
+#crumbs ul li a:before {
+    content: "";
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-left: 40px solid #ffffff;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+  
+#crumbs ul li:first-child a {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+  
+#crumbs ul li:first-child a:before {
+    display: none;
+}
+  
+#crumbs ul li:last-child a {
+    padding-right: 40px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+  
+#crumbs ul li:last-child a:after {
+    display: none;
+}
+  
+#crumbs ul li a:hover {
+    background: #357DFD;
+    color: #fff;
+}
+  
+#crumbs ul li a:hover:after {
+    border-left-color: #357DFD;
+    color: #fff;
+}
 
 .container {
     max-width: 400px;
-    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
-.back-to-products-btn {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    padding: 10px 15px;
-    background-color: #3498db;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
 
-.back-to-products-btn:hover {
-    background-color: #2980b9;
-}
 
 h1 {
     text-align: center;
 }
 
+
+
 #cartContents {
     margin-top: 20px;
     border-top: 1px solid #ddd;
+    text-align: center; 
 }
 
 #cartContents div {
-    display: block;
+    display: inline-block; 
     padding: 10px;
     border-bottom: 1px solid #ddd;
     margin-bottom: 10px;
+    text-align: left; 
+    width: 100%;
 }
+
 
 #totalPrice {
     font-size: 1.2em;
