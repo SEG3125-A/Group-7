@@ -1,17 +1,17 @@
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensures the body takes at least the full height of the viewport */
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
   margin: 0;
   font-family: 'Arial', sans-serif;
+  background-color: #f0f8ff;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex: 1; /* This makes the container take up the available vertical space */
+  text-align: center;
+  margin-top: 20px; 
 }
 
 .tab {
@@ -43,4 +43,83 @@ body {
 
 #footer {
   margin-top: auto; /* Pushes the footer to the bottom of the container */
+}
+
+
+#crumbs {
+  position: absolute;
+  top: 40%;
+  right: 29%; 
+  transform: translateY(-50%);
+  text-align: right;
+  margin: 0;
+}
+
+#crumbs ul {
+  list-style: none;
+  display: inline-table;
+}
+#crumbs ul li {
+  display: inline;
+}
+#crumbs ul li a {
+  display: block;
+  float: left;
+  height: 50px;
+  background: #0000ffe2;
+  text-align: center;
+  padding: 30px 20px 0 60px;
+  position: relative;
+  margin: 0 10px 0 0;
+  font-size: 20px;
+  text-decoration: none;
+  color: #ffffff;
+}
+#crumbs ul li a:after {
+  content: "";
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  border-left: 40px solid #0000ffe2;
+  position: absolute;
+  right: -40px;
+  top: 0;
+  z-index: 1;
+}
+#crumbs ul li a:before {
+  content: "";
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  border-left: 40px solid #0cebeb;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#crumbs ul li:first-child a {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#crumbs ul li:first-child a:before {
+  display: none;
+}
+
+#crumbs ul li:last-child a {
+  padding-right: 40px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#crumbs ul li:last-child a:after {
+  display: none;
+}
+
+#crumbs ul li a:hover {
+  background: #357DFD;
+  color: #fff;
+}
+
+#crumbs ul li a:hover:after {
+  border-left-color: #357DFD;
+  color: #fff;
 }

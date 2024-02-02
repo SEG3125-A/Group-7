@@ -5,13 +5,24 @@ body {
 }
 
 form {
-    max-width: 400px;
-    margin: auto;
-    background-color: #ffffff; 
-    padding: 20px;
+    max-width: 500px;
+    width: 80%;
+    max-height: 600px;
+    height: 30vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 40px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
 
 img {
     max-width: 300px;
@@ -24,21 +35,105 @@ h1 {
     text-align: center; 
 }
 
-label {
+form label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 10px; 
+    text-align: left; 
 }
 
+
 button {
+    display: block; 
+    margin: 0 auto; 
     padding: 10px;
-    margin-top: 10px;
-    background-color: #3498db; 
-    color: #ffffff; 
+    background-color: #3498db;
+    color: #ffffff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    width: 50%; 
 }
 
 button:hover {
-    background-color: #2980b9; 
+    background-color: #2980b9;
 }
+
+
+
+#crumbs {
+    position: absolute;
+    top: 10%;
+    right: 29%; 
+    transform: translateY(-50%);
+    text-align: right;
+    margin: 0;
+}
+  
+  #crumbs ul {
+    list-style: none;
+    display: inline-table;
+  }
+  #crumbs ul li {
+    display: inline;
+  }
+  #crumbs ul li a {
+    display: block;
+    float: left;
+    height: 50px;
+    background: #0000ffe2;
+    text-align: center;
+    padding: 30px 20px 0 60px;
+    position: relative;
+    margin: 0 10px 0 0;
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+  }
+  #crumbs ul li a:after {
+    content: "";
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-left: 40px solid #0000ffe2;
+    position: absolute;
+    right: -40px;
+    top: 0;
+    z-index: 1;
+  }
+  #crumbs ul li a:before {
+    content: "";
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-left: 40px solid #f0f8ff;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  #crumbs ul li:first-child a {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  
+  #crumbs ul li:first-child a:before {
+    display: none;
+  }
+  
+  #crumbs ul li:last-child a {
+    padding-right: 40px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  #crumbs ul li:last-child a:after {
+    display: none;
+  }
+  
+  #crumbs ul li a:hover {
+    background: #357DFD;
+    color: #fff;
+  }
+  
+  #crumbs ul li a:hover:after {
+    border-left-color: #357DFD;
+    color: #fff;
+  }

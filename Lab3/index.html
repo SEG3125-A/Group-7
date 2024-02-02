@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 </head>
 
 <body>
@@ -13,12 +14,6 @@
 <div class="container">
     <div class="title">
         <h1>Hi Dear Customer! Welcome to Welmert Online Grocery Store</h1>
-    </div>
-
-    <div class="tab">
-        <button id="clientButton" class="tablinks" onclick="navigateToClientPage()">Client</button>
-        <button id="productButton" class="tablinks" onclick="navigateToProductPage()">Products</button>
-        <button id="cartButton" class="tablinks" onclick="navigateToCartPage()">Cart</button>
     </div>
 </div>
 
@@ -38,6 +33,16 @@
 </section>
 
 <script src="main.js"></script>
+
+<div id="crumbs">
+	<ul>
+		<li><a href="./index.html"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+		<li><a href="./customer.html"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
+		<li><a href="./products.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Products</a></li>
+		<li><a href="./cart.html"><i class="fa fa-cart-plus" aria-hidden="true"></i> Cart</a></li>
+		
+	</ul>
+</div>
 
 </body>
 </html>
