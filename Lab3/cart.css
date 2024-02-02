@@ -13,6 +13,21 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.back-to-products-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-to-products-btn:hover {
+    background-color: #2980b9;
+}
+
 h1 {
     text-align: center;
 }
