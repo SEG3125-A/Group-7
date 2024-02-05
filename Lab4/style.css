@@ -1,0 +1,27 @@
+body {
+    padding-top: 20px;
+}
+
+/* Custom styles for alignment and aesthetics */
+#navigation-bar .container {
+    max-width: 100%;
+}
+
+header {
+    align-items: center;
+}
+
+.nav-link {
+    color: #495057;
+}
+
+.nav-link:hover {
+    color: #0056b3;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: #000;
+    margin-right: auto;
+    /* Ensures the title is aligned to the left */
+}
