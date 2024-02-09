@@ -25,3 +25,7 @@ h1 {
     margin: auto auto;
     /* Ensures the title is aligned to the left */
 }
+
+#carouselExample {
+    margin: 0 auto;
+}
