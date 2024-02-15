@@ -1,0 +1,35 @@
+/* Ensure the navigation bar takes full height */
+#nav-bar .d-flex {
+    height: 100vh;
+}
+
+/* Fix the navigation bar to the left side and make it stretch the full height */
+#nav-bar {
+    position: fixed; /* Make the navigation bar fixed */
+    top: 0; /* Align the top of the navigation bar with the top of the viewport */
+    left: 0; /* Align the left side of the navigation bar with the left side of the viewport */
+    bottom: 0; /* Stretch the navigation bar to the bottom of the viewport */
+    width: 280px; /* Adjust the width as per your design */
+}
+
+/* Ensure the navigation bar's container takes full height */
+#nav-bar .container {
+    height: 100%; /* Make sure the container fills the nav bar vertically */
+    padding: 0; /* Remove default padding to ensure alignment */
+}
+
+/* Adjusted styling for navigation links for better visibility and consistency */
+.nav-link {
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.nav-link:hover {
+    background-color: #007AFF; /* Change as per your color scheme */
+    color: white; /* Ensure text color is white (or any contrasting color) for better readability */
+}
+
+/* Additional styles to enhance the appearance */
+#nav-bar-body {
+    background-color: #343a40; /* Dark background for the side navigation bar, adjust based on your theme */
+    color: white; /* Ensure text within the navigation bar is white for better visibility */
+}
