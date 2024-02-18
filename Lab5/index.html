@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbershop</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+
+    <script>
+        function validateForm() {
+            var phoneNumber = document.getElementById("phoneInput").value;
+            var creditCard = document.getElementById("ccnum").value;
+
+            var phoneRegex = /^\+(?:[0-9] ?){6,14}[0-9]$/;
+            var creditCardRegex = /\b(?:\d[ -]*?){13,16}\b/;
+
+            if (!phoneRegex.test(phoneNumber)) {
+                alert("Invalid phone number!");
+                return false;
+            }
+
+            if (!creditCardRegex.test(creditCard)) {
+                alert("Invalid credit card number!");
+                return false;
+            }
+
+            return true;
+        }
+
+        function showHairStyleInfo(style) {
+            var hairStyleInfo = document.getElementById('hairStyleInfo');
+            hairStyleInfo.innerText = style;
+            hairStyleInfo.classList.add('active');
+        }
+
+        function hideHairStyleInfo() {
+            var hairStyleInfo = document.getElementById('hairStyleInfo');
+            hairStyleInfo.classList.remove('active');
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <section id="navigation-bar" class="container">
+        <div class="container">
+            <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+                <div class="d-flex align-items-center">
+                    <a href="#" class="d-inline-flex align-items-center me-2 mb-2 mb-md-0 text-dark text-decoration-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-scissors" viewBox="0 0 16 16">
+                            <path d="M3.5 3.5c-.614-.884-.074-1.962.858-2.5L8 7.226 11.642 1c.932.538 1.472 1.616.858 2.5L8.81 8.61l1.556 2.661a2.5 2.5 0 1 1-.794.637L8 9.73l-1.572 2.177a2.5 2.5 0 1 1-.794-.637L7.19 8.61zm2.5 10a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0m7 0a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0" />
+                        </svg>
+                    </a>
+                </div>
+                <h1 class="ms-3">Barbershop Group 7</h1>
+                <nav>
+                    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                        <li><a href="#styles" class="nav-link px-2">Styles</a></li>
+                        <li><a href="#service" class="nav-link px-2">Booking</a></li>
+                        <li><a href="#about" class="nav-link px-2">About Us</a></li>
+                    </ul>
+                </nav>
+
+            </header>
+        </div>
+    </section>
+
+    <section id="carousel">
+        <div class="container">
+            <div id="carousel" class="carousel slide container">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./pic/barbershop.png" class="d-block w-100" alt="barbershop">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./pic/greatService.png" class="d-block w-100" alt="service-quality">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <br>
+
+    <section id="styles"></section>
+    <div class="container" style="position: relative;">
+        <h2><i class="bi bi-brush"></i>   View Our Hair Design! ૮ ˶ᵔ ᵕ ᵔ˶ ა</h2>
+
+        <img src="pic/new_hairStyle.png" alt="hairstyle" usemap="#map1">
+        <map name="map1">
+            <area shape="rect" coords="0,0,140,158" onmouseover="showHairStyleInfo('The side bob haircut is a chic variation of the classic bob, featuring a sleek, asymmetrical design with layers that frame the face. With a side parting and versatility in styling, it offers a modern and low-maintenance look for individuals seeking a trendy yet polished hairstyle.')" onmouseout="hideHairStyleInfo()" alt="Top Left">
+            <area shape="rect" coords="140,0,280,158" onmouseover="showHairStyleInfo('The short bob is a stylish haircut characterized by its chin-length or slightly shorter length, framing the face with clean lines and minimal layers. Versatile and low-maintenance, it offers a chic and modern look suitable for various hair textures and face shapes.')" onmouseout="hideHairStyleInfo()" alt="Top Right">
+            <area shape="rect" coords="0,158,140,317" onmouseover="showHairStyleInfo('The romantic wave bob exudes elegance with soft, cascading waves that add a touch of romance to the classic bob haircut. It offers a graceful and sophisticated look, ideal for those seeking a charming and timeless hairstyle.')" onmouseout="hideHairStyleInfo()" alt="Bottom Left">
+            <area shape="rect" coords="140,158,280,317" onmouseover="showHairStyleInfo('The beachy bob is a relaxed and tousled variation of the classic bob, featuring loose waves and texture reminiscent of a day at the beach. Effortlessly stylish, it offers a casual and carefree look perfect for those seeking a laid-back yet trendy hairstyle.')" onmouseout="hideHairStyleInfo()" alt="Bottom Right">
+        </map>
+        <div class="hair-style-info" id="hairStyleInfo">Hair Style Info</div>
+    </div>
+    </section>
+
+    <section id="service">
+        <div class="container mt-5">
+            <h2><i class="bi bi-calendar"></i>   Book a Barber Service</h2>
+            <form onsubmit="return validateForm()">
+                <div class="form-group">
+                    <label for="serviceSelect">Select Service:</label>
+                    <select class="form-control" id="serviceSelect">
+                        <option value="option">--Select an Option--</option>
+                        <option value="haircut">Haircut -- $100</option>
+                        <option value="face-mask">Face Mask -- $15</option>
+                        <option value="dye">Dye --$50</option>
+                        <option value="brows">Eyebrows -- $10</option>
+                    </select>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="professionalSelect"><i class="bi bi-people"></i>   Select Professional:</label>
+                    <select class="form-control" id="professionalSelect" onchange="disableUnavailableDates()" required>
+                        <option value="">--Select a Professional--</option>
+                        <option value="tom_cruise">Tom Cruise</option>
+                        <option value="brad_pitt">Brad Pitt</option>
+                        <option value="michael_jackson">Michael Jackson</option>
+                    </select>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="datetimePicker">Select Date and Time:</label>
+                    <input type="datetime-local" class="form-control" id="datetimePicker" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="nameInput">Your Name:</label>
+                    <input type="text" class="form-control" id="nameInput" placeholder="Enter your name" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="emailInput">Email Address:</label>
+                    <input type="email" class="form-control" id="emailInput" placeholder="Enter your email" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="phoneInput">Phone Number:</label>
+                    <input type="tel" class="form-control" id="phoneInput" placeholder="Enter your phone number" required>
+                </div>
+                <br>
+                <h3 class="mt-4 mb-3"><i class="bi bi-credit-card"></i>   Payment Details</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="cname">Name on Card</label>
+                            <input type="text" id="cname" name="cardname" class="form-control" placeholder="John More Doe" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="ccnum">Credit Card Number</label>
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-discover"></i>
+                            <input type="text" id="ccnum" name="cardnumber" class="form-control" placeholder="1111-2222-3333-4444" required>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="expmonth">Expiration Month</label>
+                            <input type="text" id="expmonth" name="expmonth" class="form-control" placeholder="MM" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="expyear">Expiration Year</label>
+                            <input type="text" id="expyear" name="expyear" class="form-control" placeholder="YYYY" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" name="cvv" class="form-control" placeholder="123" required>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Book Appointment</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container py-5">
+            <h2 class="pb-2 border-bottom">About Us</h2>
+            <p>Located in the center of downtown, Barbershop Group 7 has been providing grooming services since 2010. Our experienced team offers a range of services designed to meet the needs of every customer.</p>
+            <p><strong>Address:</strong> 99 Rideau Street, Ottawa, Ontario, T1C2T5</p>
+        </div>
+    </section>
+
+    <!-- Bootstrap Javascript-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
