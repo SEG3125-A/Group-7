@@ -30,6 +30,11 @@ h1 {
     margin: 0 auto;
 }
 
+.offDay a {
+    background-color: #CCCCCC;
+    color: #666666;
+}
+
 .container {
     position: relative;
 }

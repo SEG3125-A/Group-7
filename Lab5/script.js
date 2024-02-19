@@ -37,20 +37,23 @@ function disableUnavailableDates() {
     let professionalSelect = $('#professionalSelect').val();
     let offDays = getProfessionalOffDays(professionalSelect); // Get off days for the selected professional
 
-    $('#datetimePicker').datepicker('destroy'); // Destroy any existing datepicker instance
-    $('#datetimePicker').datepicker({
-        beforeShowDay: function (date) {
+    $('#datePicker').datepicker('destroy'); // Destroy any existing datepicker instance
+    $('#datePicker').datepicker({
+        dateFormat: 'yy-mm-dd',
+        beforeShowDay: function(date) {
             let day = date.getDay();
-            let dateString = $.datepicker.formatDate('yy-mm-dd', date);
+            let dateString = jQuery.datepicker.formatDate('yy-mm-dd', date);
 
-            // Disable weekends and specific off days for the professional
-            let isWeekend = (day === 0 || day === 6); // Sunday = 0, Saturday = 6
-            let isOffDay = offDays.indexOf(dateString) !== -1;
-
-            return [!isWeekend && !isOffDay];
+            // Disable weekends and check if the date is in the offDays array
+            if (day === 0 || day === 6 || offDays.indexOf(dateString) >= 0) {
+                return [false, 'offDay', 'Unavailable']; // Disable these dates
+            } else {
+                return [true, '', '']; // Enable all other dates
+            }
         }
     });
 }
+
 
 function getProfessionalOffDays(professional) {
     // Return an array of date strings when the professional is off
