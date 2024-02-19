@@ -1,6 +1,8 @@
 $(document).ready(function () {
     // Initialize the date picker with no restrictions
-    $('#datetimePicker').datepicker();
+    $('#datePicker').datepicker({
+        dateFormat: 'yy-mm-dd' // Adjust date format to your preference
+    });
 
     // Update available dates when a professional is selected
     $('#professionalSelect').change(disableUnavailableDates);
@@ -10,7 +12,9 @@ function validateForm() {
     let phoneNumber = $("#phoneInput").val();
     let creditCard = $("#ccnum").val();
 
-    let phoneRegex = /^\+[1-9]\d{1,14}$/;
+    // Updated regex to match Canadian phone numbers in various formats
+    // Matches formats like +1XXXXXXXXXX, (XXX) XXX-XXXX, XXX-XXX-XXXX
+    let phoneRegex = /^\+1\d{10}$|^\(\d{3}\) \d{3}-\d{4}$|^\d{3}-\d{3}-\d{4}$/;
     let creditCardRegex = /^\d{4}-?\d{4}-?\d{4}-?\d{4}$/;
 
     if (!phoneRegex.test(phoneNumber)) {
@@ -23,10 +27,11 @@ function validateForm() {
         return false;
     }
 
-    window.alert("Successful");
+    alert("Form submission successful.");
 
     return true; // Return true if both validations pass
 }
+
 
 function disableUnavailableDates() {
     let professionalSelect = $('#professionalSelect').val();
