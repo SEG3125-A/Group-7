@@ -1,0 +1,101 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.my-gradient-background {
+  background: linear-gradient(to bottom, #000000, #333333);
+  /* Add other styles such as padding or margin as needed */
+}
+
+#footer ul.nav li.nav-item {
+  color: white;
+}
+
+#survey-body div {
+  margin-bottom: 20px;
+}
+
+#survey-body label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#survey-body input[type="text"],
+#survey-body select,
+#survey-body textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+#survey-body .checkbox-question label,
+#survey-body .single-choice-question label {
+  margin-left: 10px;
+  font-weight: normal;
+}
+
+#survey-body .submit-button button {
+  display: block;
+  margin: 0 auto;
+  padding: 8px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#survey-body .submit-button button:hover {
+  background-color: #0056b3;
+}
+
+#survey-body {
+  color: #ffffff;
+  /* This sets the text color to white */
+}
+
+#survey-body label {
+  color: #ffffff;
+  /* Color for labels */
+}
+
+#survey-body p {
+  color: #ffffff;
+  /* Color for paragraphs */
+}
+
+/* If you have other specific elements like headers (h1, h2, etc.), you can set their colors as well */
+#survey-body h1,
+#survey-body h2,
+#survey-body h3 {
+
+  /* White color for headings */
+}
+
+.checkbox-container {
+  display: flex;
+}
+
+.checkbox-container label {
+  flex: 1;
+  margin-right: 5px;
+  /* Adjust spacing to your preference */
+}
+
+.required::after {
+  color: red;
+  content: ' *';
+
+}
+
+.text-color {
+  color: yellow;
+  font-style: Helvetica;
+
+}

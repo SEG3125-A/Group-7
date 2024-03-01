@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Survey</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div class="my-gradient-background">
+        <!--Introduction-->
+        <section id="introduction">
+            <div id="introduction-main">
+                <div class="row flex-lg-row-reverse align-items-center g-5 py-5 px-3">
+                    <div class="col-12 col-sm-8 col-lg-6">
+                        <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="./images/steamUI.png" class="d-block mx-lg-auto img-fluid" alt="Steam UI"
+                                        width="700" height="500" loading="lazy">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./images/steamUI1.png" class="d-block mx-lg-auto img-fluid"
+                                        alt="Another Image" width="700" height="500" loading="lazy">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./images/steamUI2.png" class="d-block mx-lg-auto img-fluid"
+                                        alt="Another Image" width="700" height="500" loading="lazy">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./images/steamUI3.png" class="d-block mx-lg-auto img-fluid"
+                                        alt="Another Image" width="700" height="500" loading="lazy">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h1 class="display-5 lh-1 mb-3" style="color: antiquewhite;">
+                            <a href="https://store.steampowered.com" style="color: inherit; text-decoration: none;">
+                                Link to Steam
+                            </a>
+                        </h1>
+                        <p class="lead" style="color: lightblue;">
+                            Participate in our brief survey to help enhance Steam's user interface. Share your thoughts
+                            on
+                            its usability and design, contributing to a more intuitive and enjoyable user experience.
+                            Your
+                            feedback is invaluable!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Survey Main Body-->
+        <section id="survey-body" class="py-4 px-3 survey-section">
+            <div class="text-question">
+                <label class="required" for="textQuestion">What do you like most about Steam's interface?</label>
+                <input type="text" id="textQuestion" name="textQuestion">
+            </div>
+
+            <div class="single-choice-question">
+                <p>How would you rate Steam's navigation ease?</p>
+                <label>
+                    <input type="radio" id="easy" name="navigationEase" value="easy">
+                    Easy
+                </label><br>
+                <label>
+                    <input type="radio" id="moderate" name="navigationEase" value="moderate">
+                    Moderate
+                </label><br>
+                <label>
+                    <input type="radio" id="difficult" name="navigationEase" value="difficult">
+                    Difficult
+                </label>
+            </div>
+
+
+            <div class="dropdown-question">
+                <label class="required" for="uiAspect">Which aspect of the UI is most important to you?</label>
+                <select id="uiAspect" name="uiAspect">
+                    <option value="slection">Please Select One</option>
+                    <option value="design">Design</option>
+                    <option value="usability">Usability</option>
+                    <option value="performance">Performance</option>
+                    <option value="content">Content</option>
+                </select>
+            </div>
+
+            <div class="checkbox-question ">
+                <p style="font-style: Helvetica;">Which features of Steam do you frequently use? (Select all that apply)
+                </p>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="store" name="feature" value="store">
+                    <label for="store">Store</label>
+                    <input type="checkbox" id="community" name="feature" value="community">
+                    <label for="community">Community</label>
+                    <input type="checkbox" id="library" name="feature" value="library">
+                    <label for="library">Library</label>
+                </div>
+            </div>
+
+            <div class="comments">
+                <label for="comments">Any additional comments:</label>
+                <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+            </div>
+
+            <div class="submit-button" onclick="buttonDemo()">
+                <button type="submit">Submit Survey</button>
+            </div>
+
+        </section>
+
+        <!--Footer-->
+        <section id="footer">
+            <div>
+                <footer class="py-3">
+                    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                        <li class="nav-item px-2y mx-3">Website Designed By:</li>
+                        <li class="nav-item px-2y mx-3">Edward He</li>
+                        <li class="nav-item px-2y mx-3">Yu-Chen Lee</li>
+                        <li class="nav-item px-2y mx-3">Eeshaan Patel</li>
+                    </ul>
+                    <p class="text-center" style="color: aliceblue;">© Group 7</p>
+                </footer>
+            </div>
+        </section>
+    </div>
+
+    <!--External Javascript-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
