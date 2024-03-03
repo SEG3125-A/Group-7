@@ -67,7 +67,7 @@
         </section>
 
         <!--Survey Main Body-->
-        <form id="simpleSurvey">
+        <form id="simpleSurvey" action="/submit" method="POST">
             <section id="survey-body" class="py-4 px-3 survey-section">
                 <div class="text-question">
                     <label class="required" for="textQuestion">What do you like most about Steam's interface?</label>
@@ -90,11 +90,10 @@
                     </label>
                 </div>
 
-
                 <div class="dropdown-question">
                     <label class="required" for="uiAspect">Which aspect of the UI is most important to you?</label>
                     <select id="uiAspect" name="uiAspect">
-                        <option value="slection">Please Select One</option>
+                        <option value="">Please Select One</option>
                         <option value="design">Design</option>
                         <option value="usability">Usability</option>
                         <option value="performance">Performance</option>
@@ -102,9 +101,9 @@
                     </select>
                 </div>
 
-                <div class="checkbox-question ">
-                    <p style="font-style: Helvetica;">Which features of Steam do you frequently use? (Select all that apply)
-                    </p>
+                <div class="checkbox-question">
+                    <p style="font-style: Helvetica;">Which features of Steam do you frequently use? (Select all that
+                        apply)</p>
                     <div class="checkbox-container">
                         <input type="checkbox" id="store" name="feature" value="store">
                         <label for="store">Store</label>
@@ -120,12 +119,12 @@
                     <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
                 </div>
 
-                <div class="submit-button" onclick="buttonDemo()">
-                    <button type="submit">Submit Survey</button>
+                <div class="submit-button">
+                    <button type="submit" value="submit">Submit Survey</button>
                 </div>
-
             </section>
         </form>
+
 
         <!--Footer-->
         <section id="footer">
