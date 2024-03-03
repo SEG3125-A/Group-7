@@ -1,25 +1,17 @@
 const express = require('express');
-const fs = require('fs');
+const cors = require('cors');
 const app = express();
 const PORT = 3000;
 
-app.use(express.json());
+app.use(cors()); // Enable CORS for cross-origin requests
+app.use(express.json()); // Parse JSON bodies
 
 app.post('/submit-survey', (req, res) => {
-    const surveyData = req.body;
-    const jsonData = JSON.stringify(surveyData, null, 2);
-    
-    fs.writeFile('survey_data.json', jsonData, (error) => {
-        if (error) {
-            console.error(error);
-            res.status(500).send('Error on saving data');
-        } else {
-            console.log('Survey data saved successfully');
-            res.status(500).send('Survey data saved successfully');
-        }
-    });
+    console.log('Received survey data:', req.body);
+    // Here, you would process and store the survey data
+    res.json({ message: 'Survey data received successfully!' });
 });
 
-app.listen(PORT, ()=>{
-    console.log('Server is running on port ${PORT}');
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
 });

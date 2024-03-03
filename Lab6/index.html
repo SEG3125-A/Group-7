@@ -67,63 +67,65 @@
         </section>
 
         <!--Survey Main Body-->
-        <section id="survey-body" class="py-4 px-3 survey-section">
-            <div class="text-question">
-                <label class="required" for="textQuestion">What do you like most about Steam's interface?</label>
-                <input type="text" id="textQuestion" name="textQuestion">
-            </div>
-
-            <div class="single-choice-question">
-                <p>How would you rate Steam's navigation ease?</p>
-                <label>
-                    <input type="radio" id="easy" name="navigationEase" value="easy">
-                    Easy
-                </label><br>
-                <label>
-                    <input type="radio" id="moderate" name="navigationEase" value="moderate">
-                    Moderate
-                </label><br>
-                <label>
-                    <input type="radio" id="difficult" name="navigationEase" value="difficult">
-                    Difficult
-                </label>
-            </div>
-
-
-            <div class="dropdown-question">
-                <label class="required" for="uiAspect">Which aspect of the UI is most important to you?</label>
-                <select id="uiAspect" name="uiAspect">
-                    <option value="slection">Please Select One</option>
-                    <option value="design">Design</option>
-                    <option value="usability">Usability</option>
-                    <option value="performance">Performance</option>
-                    <option value="content">Content</option>
-                </select>
-            </div>
-
-            <div class="checkbox-question ">
-                <p style="font-style: Helvetica;">Which features of Steam do you frequently use? (Select all that apply)
-                </p>
-                <div class="checkbox-container">
-                    <input type="checkbox" id="store" name="feature" value="store">
-                    <label for="store">Store</label>
-                    <input type="checkbox" id="community" name="feature" value="community">
-                    <label for="community">Community</label>
-                    <input type="checkbox" id="library" name="feature" value="library">
-                    <label for="library">Library</label>
+        <form id="simpleSurvey">
+            <section id="survey-body" class="py-4 px-3 survey-section">
+                <div class="text-question">
+                    <label class="required" for="textQuestion">What do you like most about Steam's interface?</label>
+                    <input type="text" id="textQuestion" name="textQuestion">
                 </div>
-            </div>
 
-            <div class="comments">
-                <label for="comments">Any additional comments:</label>
-                <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
-            </div>
+                <div class="single-choice-question">
+                    <p>How would you rate Steam's navigation ease?</p>
+                    <label>
+                        <input type="radio" id="easy" name="navigationEase" value="easy">
+                        Easy
+                    </label><br>
+                    <label>
+                        <input type="radio" id="moderate" name="navigationEase" value="moderate">
+                        Moderate
+                    </label><br>
+                    <label>
+                        <input type="radio" id="difficult" name="navigationEase" value="difficult">
+                        Difficult
+                    </label>
+                </div>
 
-            <div class="submit-button" onclick="buttonSubmit()">
-                <button type="submit">Submit Survey</button>
-            </div>
 
-        </section>
+                <div class="dropdown-question">
+                    <label class="required" for="uiAspect">Which aspect of the UI is most important to you?</label>
+                    <select id="uiAspect" name="uiAspect">
+                        <option value="slection">Please Select One</option>
+                        <option value="design">Design</option>
+                        <option value="usability">Usability</option>
+                        <option value="performance">Performance</option>
+                        <option value="content">Content</option>
+                    </select>
+                </div>
+
+                <div class="checkbox-question ">
+                    <p style="font-style: Helvetica;">Which features of Steam do you frequently use? (Select all that apply)
+                    </p>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="store" name="feature" value="store">
+                        <label for="store">Store</label>
+                        <input type="checkbox" id="community" name="feature" value="community">
+                        <label for="community">Community</label>
+                        <input type="checkbox" id="library" name="feature" value="library">
+                        <label for="library">Library</label>
+                    </div>
+                </div>
+
+                <div class="comments">
+                    <label for="comments">Any additional comments:</label>
+                    <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+                </div>
+
+                <div class="submit-button" onclick="buttonDemo()">
+                    <button type="submit">Submit Survey</button>
+                </div>
+
+            </section>
+        </form>
 
         <!--Footer-->
         <section id="footer">
@@ -145,7 +147,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-    <script src="ciient.js"></script>
+    <script src="survey.js"></script>
 </body>
 
 </html>
