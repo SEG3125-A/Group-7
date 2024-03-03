@@ -3,15 +3,12 @@ const cors = require('cors');
 const app = express();
 const PORT = 3000;
 
-app.use(cors()); // Enable CORS for cross-origin requests
-app.use(express.json()); // Parse JSON bodies
+app.use(cors());
+app.use(express.json());
 
-app.post('/submit-survey', (req, res) => {
-    console.log('Received survey data:', req.body);
-    // Here, you would process and store the survey data
-    res.json({ message: 'Survey data received successfully!' });
+app.post('/submit', (req, res) => {
+    console.log('Received data:', req.body);
+    res.json({ message: 'Data received successfully' });
 });
 
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-});
+app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
