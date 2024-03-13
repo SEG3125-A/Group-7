@@ -1,0 +1,27 @@
+/* UserProfile.css */
+
+.userProfile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  padding: 20px; /* Breathing space for the realm */
+  border-radius: 5px; /* Softened edges */
+}
+
+.userProfile-card {
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #222; /* Slightly lighter darkness for depth */
+  margin: auto; /* Centers the card */
+  maxWidth: '24rem'; /* Adjusts the width as per the emperor's command */
+}
+
+.card-img-top, .img-fluid {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px; /* Adjusts image size and margin */
+}

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  /* Remove any other styling that might interfere with the layout */
 }
 
 .App-logo {
