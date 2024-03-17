@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-
 const LoginPage = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+    const [isLoggedIn, setIsLoggedIn] = useState(false); // Add state for authentication
 
     const welcometitle = "Welcome back to Roast Resume!";
     let navigate = useNavigate();
@@ -12,9 +13,12 @@ const LoginPage = () => {
     const handleClickLogin = (e) => {
         e.preventDefault();
         // Perform login logic here, such as authentication
-        
-        // Navigate to the homepage
-        navigate("/homepage");
+        if (email === 'user@example.com' && password === 'password') { // Replace with actual authentication logic
+            setIsLoggedIn(true);
+            navigate("/homepage");
+        } else {
+            setError('Invalid email or password');
+        }
     }
 
     return (
@@ -40,9 +44,9 @@ const LoginPage = () => {
                     required 
                 />
                 <button type="submit">LOGIN</button>
+                {error && <p style={{ color: 'red' }}>{error}</p>}
             </form>
         </div>
     );
 }
 
-export default LoginPage;
