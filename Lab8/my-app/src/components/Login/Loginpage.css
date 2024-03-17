@@ -1,0 +1,99 @@
+.login-container {
+    width: calc(50% - 40px); /* Adjust the width as needed */
+    max-width: 400px;
+    margin: 40px auto; /* Centering the container vertically and horizontally */
+    padding: 40px 20px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    background-color: #fff;
+    box-sizing: border-box; /* Ensure padding is included in the width calculation */
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #8e8e8e;
+    margin-bottom: 6px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    border: 1px solid #dbdbdb;
+    font-size: 14px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #3897f0;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3578e5;
+}
+
+.or-divider {
+    margin: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+.or-divider::before, .or-divider::after {
+    content: "";
+    display: inline-block;
+    height: 1px;
+    width: 45%;
+    background-color: #dbdbdb;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.or-divider::before {
+    left: 0;
+}
+
+.or-divider::after {
+    right: 0;
+}
+
+.or-text {
+    background-color: #fff;
+    padding: 0 10px;
+    position: relative;
+    font-size: 12px;
+    color: #8e8e8e;
+}
+
+.forgot-password {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 12px;
+    color: #003569;
+    cursor: pointer;
+}
+
+.footer-text {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #8e8e8e;
+    text-align: center;
+}
