@@ -1,11 +1,12 @@
 import './App.css';
-import UserProfile from './components/UserProfile/UserProfile.js';
+import LoginPage from './LoginPage'
 
 function App() {
   return (
     <div className="App">
 
-      <UserProfile name="John Wick" age="36" job="gunman" company="continental" image="/john.jpg"/>
+      <LoginPage/>
+      
     </div>
   );
 }
