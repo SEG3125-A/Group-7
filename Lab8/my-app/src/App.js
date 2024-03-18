@@ -4,6 +4,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LoginPage from './components/Login/Loginpage';
 import UserProfile from './components/UserProfile/UserProfile';
+import ExplorePage from './components/ExplorePage';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
           company="Tech Innovations" 
           image="/john.jpg" />} 
         />
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/user-profile" element={<UserProfile />} />
+        <Route path="/explore" element={<ExplorePage />} /> 
         {/* Add other routes as needed */}
       </Routes>
     </Router>
