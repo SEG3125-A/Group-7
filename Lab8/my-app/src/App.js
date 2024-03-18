@@ -1,9 +1,8 @@
-// App.js
-
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LoginPage from './components/Login/Loginpage';
 import UserProfile from './components/UserProfile/UserProfile';
+import Signup from './components/Signup/Signup';
 
 function App() {
   return (
@@ -17,7 +16,7 @@ function App() {
           company="Tech Innovations" 
           image="/john.jpg" />} 
         />
-        {/* Add other routes as needed */}
+        <Route path="sign-up" element={<Signup/>} />
       </Routes>
     </Router>
   );
