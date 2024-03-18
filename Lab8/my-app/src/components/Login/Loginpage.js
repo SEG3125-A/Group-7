@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate, Link} from 'react-router-dom';
 import axios from 'axios';
 import './Loginpage.css';
 
@@ -6,6 +7,7 @@ const LoginPage = () => {
   const [credentials, setCredentials] = useState({ email: '', password: '' });
   const { email, password } = credentials;
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -15,15 +17,8 @@ const LoginPage = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.post('http://localhost:3001/login', credentials);
-      console.log(response.data); // Handle success (e.g., redirect to user profile page)
-    } catch (error) {
-      console.error(error);
-      setError('Invalid email or password');
-    }
+  const handleSubmit = () => {
+    navigate("/user-profile");
   };
 
   return (
@@ -55,6 +50,7 @@ const LoginPage = () => {
         {error && <p className="error">{error}</p>}
         <button type="submit">LOGIN</button>
       </form>
+      <p>Don't have a account yet?<Link to="sign-up">Sign Up!</Link></p>
     </div>
   );
 }

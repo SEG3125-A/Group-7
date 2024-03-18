@@ -16,6 +16,7 @@ class UserProfile extends Component {
                         <p className="card-text"><strong>Age:</strong> {age}</p>
                         <p className="card-text"><strong>Job Title:</strong> {job}</p>
                         <p className="card-text"><strong>Company:</strong> {company}</p>
+                        
                     </div>
                 </div>
             </div>
