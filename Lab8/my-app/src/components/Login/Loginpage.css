@@ -9,22 +9,34 @@ body {
     color: black; 
   }
   
-  form {
-    background-color: #fff;
+  .background-container {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('hfhhf.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-container {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    margin: 0 auto;
-    
-  }
-
-h1 {
-    text-align: center;
-    color: #007bff; 
-    margin-bottom: 0.5rem; 
+    width: 90%; 
+    max-width: 500px; 
   }
   
+
+
+.form-container h1{
+    text-align: center; 
+    font-family: Lucida;
+    color: white; 
+    margin-bottom: 0.5rem; 
+  }
+
   
   h2 {
     text-align: center;
@@ -69,3 +81,8 @@ h1 {
     background-color: #0056b3;
   }
   
+  .form-container p{
+    text-align: center;
+    padding: 20px;
+    color: white;
+  }
