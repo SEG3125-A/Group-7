@@ -6,6 +6,24 @@ const ExplorePage = () => {
   const [pdfFiles, setPdfFiles] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // Set the background on the body when the component mounts and revert when it unmounts
+  useEffect(() => {
+    document.body.style.backgroundImage = 'url("/hfhhf.jpeg")';
+    document.body.style.backgroundSize = 'cover';
+    document.body.style.backgroundPosition = 'center center';
+    document.body.style.margin = '0';
+    document.body.style.height = '100vh';
+
+    // Cleanup function to revert body styles
+    return () => {
+      document.body.style.backgroundImage = '';
+      document.body.style.backgroundSize = '';
+      document.body.style.backgroundPosition = '';
+      document.body.style.margin = '';
+      document.body.style.height = '';
+    };
+  }, []);
+
   useEffect(() => {
     axios.get('http://localhost:3001/explore')
       .then(response => setResumes(response.data))
@@ -48,12 +66,7 @@ const ExplorePage = () => {
   };
 
   return (
-    <div style={{ 
-          backgroundImage: 'url("./hfhhf.jpeg")', 
-          backgroundSize: 'cover', 
-          backgroundPosition: 'center center',
-          minHeight: '100vh' // Ensure it covers the full screen height
-        }}>
+    <div style={{ position: 'relative', zIndex: 2 }}>
       <div style={{ position: 'sticky', top: 0, background: 'white', zIndex: 100, padding: '10px', borderBottom: '1px solid #ccc', textAlign: 'center' }}>
         <h1>Explore Resumes</h1>
         <input type="file" accept="application/pdf" multiple onChange={handlePdfUpload} />
