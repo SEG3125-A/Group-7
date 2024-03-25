@@ -48,7 +48,12 @@ const ExplorePage = () => {
   };
 
   return (
-    <div>
+    <div style={{ 
+          backgroundImage: 'url("./hfhhf.jpeg")', 
+          backgroundSize: 'cover', 
+          backgroundPosition: 'center center',
+          minHeight: '100vh' // Ensure it covers the full screen height
+        }}>
       <div style={{ position: 'sticky', top: 0, background: 'white', zIndex: 100, padding: '10px', borderBottom: '1px solid #ccc', textAlign: 'center' }}>
         <h1>Explore Resumes</h1>
         <input type="file" accept="application/pdf" multiple onChange={handlePdfUpload} />
