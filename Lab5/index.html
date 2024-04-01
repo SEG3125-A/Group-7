@@ -44,7 +44,7 @@
     </section>
 
     <section id="carousel">
-        <div class="container">
+        <div class="container mt-3 mb-3">
             <div id="carousel" class="carousel slide container">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -68,29 +68,35 @@
         </div>
     </section>
 
-    <br>
+    <section id="chatbot">
+        <div class="container">
+            <iframe allow="microphone;" width="350" height="430"
+                src="https://console.dialogflow.com/api-client/demo/embedded/9225fe2b-948a-49a8-a637-9cf083a21d19">
+            </iframe>
+        </div>
+    </section>
 
-    <section id="styles"></section>
-    <div class="container" style="position: relative;">
-        <h2><i class="bi bi-brush"></i> View Our Hair Design! ૮ ˶ᵔ ᵕ ᵔ˶ ა</h2>
+    <section id="styles">
+        <div class="container" style="position: relative;">
+            <h2><i class="bi bi-brush"></i> View Our Hair Design! ૮ ˶ᵔ ᵕ ᵔ˶ ა</h2>
 
-        <img src="pic/new_hairStyle.png" alt="hairstyle" usemap="#map1">
-        <map name="map1">
-            <area shape="rect" coords="0,0,140,158"
-                onmouseover="showHairStyleInfo('The side bob haircut is a chic variation of the classic bob, featuring a sleek, asymmetrical design with layers that frame the face. With a side parting and versatility in styling, it offers a modern and low-maintenance look for individuals seeking a trendy yet polished hairstyle.')"
-                onmouseout="hideHairStyleInfo()" alt="Top Left">
-            <area shape="rect" coords="140,0,280,158"
-                onmouseover="showHairStyleInfo('The short bob is a stylish haircut characterized by its chin-length or slightly shorter length, framing the face with clean lines and minimal layers. Versatile and low-maintenance, it offers a chic and modern look suitable for various hair textures and face shapes.')"
-                onmouseout="hideHairStyleInfo()" alt="Top Right">
-            <area shape="rect" coords="0,158,140,317"
-                onmouseover="showHairStyleInfo('The romantic wave bob exudes elegance with soft, cascading waves that add a touch of romance to the classic bob haircut. It offers a graceful and sophisticated look, ideal for those seeking a charming and timeless hairstyle.')"
-                onmouseout="hideHairStyleInfo()" alt="Bottom Left">
-            <area shape="rect" coords="140,158,280,317"
-                onmouseover="showHairStyleInfo('The beachy bob is a relaxed and tousled variation of the classic bob, featuring loose waves and texture reminiscent of a day at the beach. Effortlessly stylish, it offers a casual and carefree look perfect for those seeking a laid-back yet trendy hairstyle.')"
-                onmouseout="hideHairStyleInfo()" alt="Bottom Right">
-        </map>
-        <div class="hair-style-info" id="hairStyleInfo">Hair Style Info</div>
-    </div>
+            <img src="pic/new_hairStyle.png" alt="hairstyle" usemap="#map1">
+            <map name="map1">
+                <area shape="rect" coords="0,0,140,158"
+                    onmouseover="showHairStyleInfo('The side bob haircut is a chic variation of the classic bob, featuring a sleek, asymmetrical design with layers that frame the face. With a side parting and versatility in styling, it offers a modern and low-maintenance look for individuals seeking a trendy yet polished hairstyle.')"
+                    onmouseout="hideHairStyleInfo()" alt="Top Left">
+                <area shape="rect" coords="140,0,280,158"
+                    onmouseover="showHairStyleInfo('The short bob is a stylish haircut characterized by its chin-length or slightly shorter length, framing the face with clean lines and minimal layers. Versatile and low-maintenance, it offers a chic and modern look suitable for various hair textures and face shapes.')"
+                    onmouseout="hideHairStyleInfo()" alt="Top Right">
+                <area shape="rect" coords="0,158,140,317"
+                    onmouseover="showHairStyleInfo('The romantic wave bob exudes elegance with soft, cascading waves that add a touch of romance to the classic bob haircut. It offers a graceful and sophisticated look, ideal for those seeking a charming and timeless hairstyle.')"
+                    onmouseout="hideHairStyleInfo()" alt="Bottom Left">
+                <area shape="rect" coords="140,158,280,317"
+                    onmouseover="showHairStyleInfo('The beachy bob is a relaxed and tousled variation of the classic bob, featuring loose waves and texture reminiscent of a day at the beach. Effortlessly stylish, it offers a casual and carefree look perfect for those seeking a laid-back yet trendy hairstyle.')"
+                    onmouseout="hideHairStyleInfo()" alt="Bottom Right">
+            </map>
+            <div class="hair-style-info" id="hairStyleInfo">Hair Style Info</div>
+        </div>
     </section>
 
     <section id="service">
@@ -140,7 +146,8 @@
                 <br>
                 <div class="form-group">
                     <label for="phoneInput">Phone Number:</label>
-                    <input type="tel" class="form-control" id="phoneInput" placeholder="Enter your phone number" required>
+                    <input type="tel" class="form-control" id="phoneInput" placeholder="Enter your phone number"
+                        required>
                     <small class="form-text text-muted">Example: +16476150823</small>
                 </div>
                 <br>
